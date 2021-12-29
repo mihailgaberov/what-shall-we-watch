@@ -18,5 +18,13 @@
       height: 100%;
       width: .8rem;
       background-color: #4F0C0C;
+
+      &:first-child {
+        margin-left: 2rem;
+      }
+
+      &:last-child {
+        margin-right: 2rem;
+      }
     }
   }
