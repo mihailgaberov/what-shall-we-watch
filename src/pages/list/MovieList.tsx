@@ -70,7 +70,7 @@ const MovieList: FunctionComponent<MovieListProps> = ({ movies }) => {
     console.log(movies)
     return (
         <div className='movies-list'>
-
+            <header>Movies</header>
             {movies.map((movie: Movie, idx) => <ul className='movie' key={idx}>
                 <li><span className='bolded'>Title: </span><span>{movie.original_title}</span></li>
                 <li><span className='bolded'>Overview: </span><span>{movie.overview}</span></li>
