@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+
+import Header from './components/Header'
+import './App.scss'
 
 const API_KEY = import.meta.env.VITE_API_KEY
 
@@ -75,16 +77,17 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        Ко Да Глеам!?
-      </header>
+     <Header />
       <div className='movies-list'>
         {movies.map((movie: Movie, idx) => <ul className='movie' key={idx}>
-            <li><span className='bolded'>Title: </span><span>{movie.original_title}</span></li>
-            <li><span className='bolded'>Overview: </span><span>{movie.overview}</span></li>
-            <li><span className='bolded'>Popularity: </span><span>{movie.popularity}</span></li>
-            <li><img src={'http://image.tmdb.org/t/p/w154' + movie.backdrop_path + `?api_key=${API_KEY}`} alt='tsest'/></li>
-          </ul>)}
+          <li><span className='bolded'>Title: </span><span>{movie.original_title}</span></li>
+          <li><span className='bolded'>Overview: </span><span>{movie.overview}</span></li>
+          <li><span className='bolded'>Popularity: </span><span>{movie.popularity}</span></li>
+          <li><a href="">
+            <img src={'http://image.tmdb.org/t/p/w154' + movie.backdrop_path + `?api_key=${API_KEY}`} alt='tsest' />
+          </a>
+          </li>
+        </ul>)}
       </div>
     </div>
   )
