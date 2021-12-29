@@ -1,12 +1,35 @@
+/* Orientation Lock */
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+html {
+  background-color: #2f80ed;
+}
+
 .app {
   text-align: center;
-  font-family: 'Allan', cursive;
+  font-family: "Allan", cursive;
+  position: absolute;
+  width: 390px;
+  height: 844px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #e36fa6 100%);
 
-.movies-list {
-  text-align: left;
-}
+  .movies-list {
+    text-align: left;
+  }
 
-.bolded {
-  font-weight: bold;
-}
+  .bolded {
+    font-weight: bold;
+  }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Header from './components/Header'
+import Home from './pages/homepage'
 import './App.scss'
 
 const API_KEY = import.meta.env.VITE_API_KEY
@@ -78,7 +79,8 @@ function App() {
   return (
     <div className="app">
      <Header />
-      <div className='movies-list'>
+     <Home />
+      {/* <div className='movies-list'>
         {movies.map((movie: Movie, idx) => <ul className='movie' key={idx}>
           <li><span className='bolded'>Title: </span><span>{movie.original_title}</span></li>
           <li><span className='bolded'>Overview: </span><span>{movie.overview}</span></li>
@@ -88,7 +90,7 @@ function App() {
           </a>
           </li>
         </ul>)}
-      </div>
+      </div> */}
     </div>
   )
 }
