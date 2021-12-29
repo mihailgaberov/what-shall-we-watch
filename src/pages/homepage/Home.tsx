@@ -2,14 +2,15 @@ import { FunctionComponent } from "react";
 
 import './Home.scss'
 
-interface HomeProps {
-    
-}
- 
-const Home: FunctionComponent<HomeProps> = () => {
+const Home: FunctionComponent = () => {
     return (
-        <div className="home">home page here</div>
+        <div className="home">
+            <div className="controls">
+                <button onClick={() => console.log('popular')} className="cta left">Most Popular</button>
+                <button onClick={() => console.log('lucky')} className="cta right">Feeling Lucky</button>
+            </div>
+        </div>
     );
 }
- 
+
 export default Home;

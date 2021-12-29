@@ -1,5 +1,37 @@
 .home {
-    background: url('../../../assets/hp_image.svg') no-repeat top left;
+    background: url("../../../assets/hp_image.svg") no-repeat top left;
     min-width: 390px;
     height: 353px;
+
+    .controls {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .cta {
+        position: absolute;
+        height: 58px;
+        top: 417px;
+        background: linear-gradient(180deg, #e9ae3c 0%, rgba(233, 205, 60, 0) 100%);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+        font-family: "Allan", cursive;
+        border: none;
+
+        &:focus {
+            box-shadow: 0 -4px -4px rgba(0, 0, 0, 0.25);
+            border: 2px solid white;
+        }
+
+        &.left {
+            left: 3rem;
+        }
+
+        &.right {
+            right: 3rem;
+        }
+    }
 }
