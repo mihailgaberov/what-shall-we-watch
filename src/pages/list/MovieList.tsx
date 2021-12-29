@@ -71,7 +71,14 @@ const MovieList: FunctionComponent<MovieListProps> = ({ movies }) => {
     return (
         <div className='movies-list'>
             <header>Movies</header>
-            {movies.map((movie: Movie, idx) => <ul className='movie' key={idx}>
+            <ul className="table-header">
+                <li></li>
+                <li>Title</li>
+                <li>Description</li>
+                <li>Rating</li>
+                <li>Poster</li>
+            </ul>
+            {movies.map((movie: Movie, idx) => <ul className='movies' key={idx}>
                 <li><span className='bolded'>Title: </span><span>{movie.original_title}</span></li>
                 <li><span className='bolded'>Overview: </span><span>{movie.overview}</span></li>
                 <li><span className='bolded'>Rating: </span><span>{movie.vote_average}</span></li>

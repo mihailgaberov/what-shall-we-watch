@@ -1,4 +1,6 @@
 .movies-list {
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #E36FA6 100%);
+
     header {
         background: #df7784;
         border-radius: 40px 40px 0px 0px;
@@ -10,5 +12,48 @@
         font-size: 1.8em;
         font-weight: bold;
         font-family: "Allan", cursive;
+    }
+
+    .table-header {
+        background-color: white;
+        padding: .5em 0;
+        margin: 0;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 17px;
+        text-align: center;
+
+        color: #959595;
+
+        li:first-child {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 10px;
+        }
+
+        li:nth-of-type(2) {
+            flex-basis: 100px;
+        }
+
+        li:nth-of-type(3) {
+            flex-basis: 150px;
+        }
+
+        li:nth-of-type(4) {
+            flex-basis: 100px;
+        }
+
+        li:nth-of-type(5) {
+            flex-basis: 100px;
+        }
+    }
+
+    .movies {
+        
     }
 }
