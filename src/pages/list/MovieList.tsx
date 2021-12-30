@@ -27,16 +27,18 @@ const MovieList: FunctionComponent<MovieListProps> = ({ movies }) => {
         <li>Title</li>
         <li>Description</li>
         <li>Rating</li>
-        <li>Poster</li>
       </ul>
       {movies.map((movie: Movie, idx) => <ul className='movies' key={idx}>
         <li>{idx + 1}.</li>
-        <li>{movie.original_title}</li>
+        <li>
+          <div>{movie.original_title}</div>
+          <div className="image-container"><a href={'http://image.tmdb.org/t/p/w500' + movie.backdrop_path + `?api_key=${API_KEY}`}>
+            <img src={'http://image.tmdb.org/t/p/w92' + movie.backdrop_path + `?api_key=${API_KEY}`} alt='tsest' />
+          </a>
+          </div>
+        </li>
         <li>{movie.overview}</li>
         <li>{movie.vote_average}</li>
-        <li><a href={'http://image.tmdb.org/t/p/w500' + movie.backdrop_path + `?api_key=${API_KEY}`}>
-          <img src={'http://image.tmdb.org/t/p/w92' + movie.backdrop_path + `?api_key=${API_KEY}`} alt='tsest' />
-        </a></li>
       </ul>)}
       <Footer prevCallback={() => console.log('prev')} nextCallback={() => console.log('next')} />
     </div>

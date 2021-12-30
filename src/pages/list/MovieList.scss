@@ -21,7 +21,7 @@
         display: flex;
         list-style-type: none;
         justify-content: space-evenly;
-        font-family: Salsa;
+        font-family: "IBM Plex Serif";
         font-style: normal;
         font-weight: normal;
         font-size: 1em;
@@ -37,17 +37,17 @@
         font-family: "IBM Plex Serif", serif;
         font-weight: 400;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-        display: flex;
         flex-direction: row;
-        width: 320px;
         padding: 5px;
 
         li {
-            flex: 1 1 auto;
+            flex: 1 1 20px;
             text-align: left;
             margin: 5px;
+
+            .image-container {
+                margin-top: .3rem;
+            }
         }
     }
 }
