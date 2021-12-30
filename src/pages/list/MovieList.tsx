@@ -31,18 +31,21 @@ const MovieList: FunctionComponent<MovieListProps> = ({ movies, prevCallback, ne
         <li>Description</li>
         <li>Rating</li>
       </ul>
-      {movies.map((movie: Movie, idx) => <ul className='movies' key={idx}>
-        <li>{(idx + 1) + (pageNum)}.</li>
-        <li>
-          <div>{movie.original_title}</div>
-          {movie.poster_path && <div className="image-container"><a href={'http://image.tmdb.org/t/p/w500' + movie.poster_path + `?api_key=${API_KEY}`}>
-            <img src={'http://image.tmdb.org/t/p/w92' + movie.poster_path + `?api_key=${API_KEY}`} alt='tsest' />
-          </a>
-          </div>}
-        </li>
-        <li>{movie.overview}</li>
-        <li>{movie.vote_average}</li>
-      </ul>)}
+      {movies.map((movie: Movie, idx) => {
+        const orderNum: number = (idx + 1) + ((pageNum - 1) * 20)
+        return <ul className='movies' key={idx}>
+          <li>{orderNum}.</li>
+          <li>
+            <div>{movie.original_title}</div>
+            {movie.poster_path && <div className="image-container"><a href={'http://image.tmdb.org/t/p/w500' + movie.poster_path + `?api_key=${API_KEY}`}>
+              <img src={'http://image.tmdb.org/t/p/w92' + movie.poster_path + `?api_key=${API_KEY}`} alt='tsest' />
+            </a>
+            </div>}
+          </li>
+          <li>{movie.overview}</li>
+          <li>{movie.vote_average}</li>
+        </ul>;
+      })}
       <Footer isPrevButtonDisabled={pageNum === 1} prevCallback={prevCallback} nextCallback={nextCallback} />
     </div>
   );
