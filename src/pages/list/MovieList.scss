@@ -1,5 +1,5 @@
 .movies-list {
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #E36FA6 100%);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #e36fa6 100%);
 
     header {
         background: #df7784;
@@ -16,7 +16,7 @@
 
     .table-header {
         background-color: white;
-        padding: .5em 0;
+        padding: 0.5em 0;
         margin: 0;
         display: flex;
         list-style-type: none;
@@ -27,33 +27,27 @@
         font-size: 1em;
         line-height: 17px;
         text-align: center;
-
         color: #959595;
-
-        li:first-child {
-            flex-grow: 0;
-            flex-shrink: 0;
-            flex-basis: 10px;
-        }
-
-        li:nth-of-type(2) {
-            flex-basis: 100px;
-        }
-
-        li:nth-of-type(3) {
-            flex-basis: 150px;
-        }
-
-        li:nth-of-type(4) {
-            flex-basis: 100px;
-        }
-
-        li:nth-of-type(5) {
-            flex-basis: 100px;
-        }
     }
 
     .movies {
-        
+        list-style: none;
+        text-align: left;
+        color: lavender;
+        font-family: "IBM Plex Serif", serif;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 320px;
+        padding: 5px;
+
+        li {
+            flex: 1 1 auto;
+            text-align: left;
+            margin: 5px;
+        }
     }
 }
