@@ -1,30 +1,42 @@
 .app-header {
-    background-color: #171515;
+  background-color: #171515;
+  color: white;
+  width: 100%;
+  height: 165px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .text {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 2.5em;
+    cursor: pointer;
     color: white;
-    width: 100%;
-    height: 165px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    .text {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 2.5em;
+    transition-property: color;
+    transition-duration: 3s;
+
+    &:hover {
+      color: maroon;
     }
 
-    .stripe {
-      height: 100%;
-      width: .8rem;
-      background-color: #4F0C0C;
-
-      &:first-child {
-        margin-left: 2rem;
-      }
-
-      &:last-child {
-        margin-right: 2rem;
-      }
+    &:focus {
+      color: maroon;
     }
   }
+
+  .stripe {
+    height: 100%;
+    width: 0.8rem;
+    background-color: #4f0c0c;
+
+    &:first-child {
+      margin-left: 2rem;
+    }
+
+    &:last-child {
+      margin-right: 2rem;
+    }
+  }
+}

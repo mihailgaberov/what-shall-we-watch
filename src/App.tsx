@@ -22,9 +22,11 @@ function App() {
     console.log('show lucky')
   }
 
+  const clearSelection = () => setMovies([])
+
   return (
     <div className="app">
-     <Header />
+     <Header onClickCallback={clearSelection} />
      {movies.length === 0 && <Home popularCallback={showMostPopular} luckyCallback={showMostLuckyMatch} />}
       {movies.length > 0 && <MovieList movies={movies} />}
     </div>
