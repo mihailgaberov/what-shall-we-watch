@@ -15,7 +15,7 @@ function App() {
   const fetchPage = (pageNum: number) => {
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=${pageNum}&with_watch_monetization_types=flatrate`)
     .then(response => response.json())
-    .then(data => setMovies(data.results));
+    .then(data => setMovies(data.results))
   }
 
   const showMostPopular = () => {
@@ -23,7 +23,10 @@ function App() {
   }
   
   const showMostLuckyMatch = () => {
-    console.log('show lucky')
+    fetch(`https://api.themoviedb.org/3/movie/122?api_key=${API_KEY}&language=en-US`)
+    .then(response => response.json())
+    .then(data => setMovies([data])
+    )
   }
 
   const clearSelection = () => setMovies([])

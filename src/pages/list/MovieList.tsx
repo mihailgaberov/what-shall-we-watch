@@ -46,7 +46,7 @@ const MovieList: FunctionComponent<MovieListProps> = ({ movies, prevCallback, ne
           <li>{movie.vote_average}</li>
         </ul>;
       })}
-      <Footer isPrevButtonDisabled={pageNum === 1} prevCallback={prevCallback} nextCallback={nextCallback} />
+      {movies.length > 1 && <Footer isPrevButtonDisabled={pageNum === 1} prevCallback={prevCallback} nextCallback={nextCallback} />}
     </div>
   );
 }
