@@ -4,11 +4,12 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: .5rem 0;
-    padding-bottom: calc(.5rem + env(safe-area-inset-bottom));
+    opacity: .9;
     position: sticky;
     width: 100%;
     z-index: 1;
     background-color: #DF7784;
+    box-shadow: 0 0 12px 0 #28384d;
     
     button {
         width: 7rem;

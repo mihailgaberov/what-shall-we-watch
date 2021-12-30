@@ -1,17 +1,26 @@
 .home {
     background: url("../../../assets/hp_image.svg") no-repeat top left;
+    background-size: 100% 100%;
     width: 100%;
     height: 353px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
 
     .controls {
         display: flex;
+        width: 100%;
         justify-content: space-evenly;
+        margin-bottom: 3.875em;
+
+        @media screen and (min-width: 390px) and (max-width: 844px) and (orientation: landscape) {
+            width: 43%;
+            margin-bottom: 2.675em;
+        }
     }
 
     .cta {
-        position: absolute;
         height: 58px;
-        top: 24.875rem;
         width: 7rem;
         background: linear-gradient(180deg, #e9ae3c 0%, rgba(233, 205, 60, 0) 100%);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
