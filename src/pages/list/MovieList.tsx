@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 
 import './MovieList.scss'
 
-interface Movie {
+export interface Movie {
   original_title: string;
   overview: string;
   vote_average: string;

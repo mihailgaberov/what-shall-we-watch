@@ -5,11 +5,12 @@ import Home from './pages/homepage'
 import MovieList from './pages/list'
 
 import './App.scss'
+import { Movie } from './pages/list/MovieList'
 
 const API_KEY = import.meta.env.VITE_API_KEY
 
 function App() {
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState<Movie[]>([])
   let [page, setPage] = useState<number>(1)
 
   const fetchPage = (pageNum: number) => {
@@ -30,8 +31,7 @@ function App() {
 
     fetch(`https://api.themoviedb.org/3/movie/${randomId}?api_key=${API_KEY}&language=en-US`)
       .then(response => response.json())
-      .then(data => setMovies([data])
-      )
+      .then(data => setMovies([data]))
   }
 
   const clearSelection = () => setMovies([])
