@@ -43,9 +43,9 @@ To run the client app:
 ```
 
 ### Stargazers
-[![Stargazers repo roster for @mihailgaberov/ko-she-gleame](https://reporoster.com/stars/mihailgaberov/ko-she-gleame)](https://github.com/mihailgaberov/ko-she-gleame/stargazers)
+[![Stargazers repo roster for @mihailgaberov/what-shall-we-watch](https://reporoster.com/stars/mihailgaberov/what-shall-we-watch)](https://github.com/mihailgaberov/what-shall-we-watch/stargazers)
 ### Forkers
-[![Forkers repo roster for @mihailgaberov/ko-she-gleame](https://reporoster.com/forks/mihailgaberov/ko-she-gleame)](https://github.com/mihailgaberov/ko-she-gleame/network/members)
+[![Forkers repo roster for @mihailgaberov/what-shall-we-watch](https://reporoster.com/forks/mihailgaberov/what-shall-we-watch)](https://github.com/mihailgaberov/what-shall-we-watch/network/members)
 
 MIT License
 
