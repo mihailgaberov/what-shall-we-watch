@@ -4,6 +4,8 @@ A small app, built with React and Vite. It consumes IMDb movies API so that an u
 by examining the most popular movies or by using built-in functionality 'Feeling lucky', which is picking randomly a movie from a pre-defined
 (say from 1-1000) list with popular movies.
 
+_Optimized to be used mainly on mobile screen._
+
 ### Screenshots
 ![screenshot](https://github.com/mihailgaberov/ko-she-gleame/blob/master/screenshots/thumbnail_IMG_1498.jpeg)
 ![screenshot](https://github.com/mihailgaberov/ko-she-gleame/blob/master/screenshots/thumbnail_IMG_1499.jpeg)
