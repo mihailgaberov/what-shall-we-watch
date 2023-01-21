@@ -21,7 +21,6 @@ interface MovieListProps {
 const API_KEY = import.meta.env.VITE_API_KEY
 
 const MovieList: FunctionComponent<MovieListProps> = ({ movies, prevCallback, nextCallback, pageNum }) => {
-  console.log(movies)
   return (
     <div className='movies-list'>
       <header>Movies</header>

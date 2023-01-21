@@ -9,7 +9,6 @@ interface FooterProps {
 }
 
 const Footer: FunctionComponent<FooterProps> = ({ prevCallback, nextCallback, isPrevButtonDisabled }) => {
-    console.log(isPrevButtonDisabled)
     return (
         <footer>
             <button disabled={isPrevButtonDisabled} onClick={() => prevCallback()} className="cta left">Prev</button>
