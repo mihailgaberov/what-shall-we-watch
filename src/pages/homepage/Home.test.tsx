@@ -4,7 +4,9 @@ import Home from './Home'
 
 describe('Home page', () => {
   it('should render CTA buttons', () => {
-    render(<Home popularCallback={undefined} luckyCallback={undefined} />)
+    const popularFn = vitest.fn()
+    const luckyFn = vitest.fn()
+    render(<Home popularCallback={popularFn} luckyCallback={luckyFn} />)
     expect(screen.getByText('Most Popular')).toBeDefined()
     expect(screen.getByText('Feeling Lucky')).toBeDefined()
   })

@@ -15,7 +15,8 @@ describe('Footer', () => {
 
   it('should be able to disable the Prev button', () => {
     const prevFn = vitest.fn()
-    render(<Footer prevCallback={prevFn} nextCallback={undefined} isPrevButtonDisabled={true} />)
+    const nextFn = vitest.fn()
+    render(<Footer prevCallback={prevFn} nextCallback={nextFn} isPrevButtonDisabled={true} />)
     userEvent.click(screen.getByText('Prev'))
     expect(prevFn).not.toHaveBeenCalled()
   })
